@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="/static/style.css" />
+
+    <title>TearSheets</title>
+
+  </head>
+  <body>
+    <div id="main">
+      <div id="sidebar">
+        <a href="/">
+            <h3 class="logo">TearSheets</h3>
+        </a>
+        <ul class="nav_category_list">
+            {% for cat in nav_sheets_list %}
+                <li class="nav_category">
+                    <p>{{cat[0]}}</p>
+                    <ul class="nav_category_sheet_list">
+                        {% for sheet in cat[1] %}
+                            <li>
+                                <a href="/sheet/s/{{ cat[0] }}/{{sheet}}">{{ sheet }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+      <div id="charts_wrapper">
+		  <div id="charts_block">
+			<h1 class="sheet_title">{{sheet.name}}</h1>
+			<div id="charts"></div>
+		  </div>
+      </div>
+    </div>
+
+    <script>
+      let chartsArr = JSON.parse('{{sheet.charts | tojson | safe}}')
+    </script>
+
+    <script src="/static/echarts.js"></script>
+    <script src="/static/sheet.js"></script>
+  </body>
+</html>

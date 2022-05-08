@@ -1,0 +1,170 @@
+html {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: scroll;
+}
+
+body {
+    background: #131313;
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: helvetica, arial, sans-serif;
+    height: 100%;
+    font-size: 16px;
+    overflow: hidden;
+    color: #F2F5F9;
+
+}
+
+::selection {
+    background: rgba(115,130,144, 0.996);
+    color: #F2F5F9;
+    text-shadow: none;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+}
+
+#sidebar {
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid #A3B9C9;
+}
+
+#sidebar .logo {
+    width: 100%;
+    color: #E7E8E9;
+    font-size: 24px;
+    text-align: center;
+}
+
+#sidebar a, #sidebar a:active, #sidebar a:visited  {
+    color: #E7E8E9;
+    text-decoration: none;
+}
+
+#sidebar a:hover {
+    cursor: pointer;
+}
+
+.nav_category_list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.nav_category_list p {
+    color: #A3B9C9;
+    margin: 0;
+    padding: 5px 0;
+}
+
+.nav_category {
+    margin: 10px 0;
+}
+
+.nav_category_sheet_list {
+    font-size: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+}
+
+.nav_category_sheet_list li {
+    margin: 5px 0;
+}
+
+#charts_wrapper {
+    flex-grow: 1;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+#charts_block {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.sheet_title {
+    font-weight: 800;
+    font-size: 44px;
+    height: 48px;
+}
+
+#charts {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.charts_section {
+    width: 100%;
+    margin: 20px 0; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#save_button {
+    display: inline-block;
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    right: 10px;
+    background-color: #2F4554;
+    border: none;
+    border-radius: 2px;
+    font-size: 16px;
+    color: #F2F5F9;
+    padding: 4px 8px;
+}
+
+#save_button:hover {
+    background-color: #88C0D0;
+    cursor: pointer;
+}
+
+#home_wrapper {
+    flex-grow: 1;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+#home_block {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#home_block ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+}
+
+#home_block ul li a, #home_block ul li a:active, #home_block ul li a:visited {
+    color: #E7E8E9;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+#home_block ul li a:hover {
+    cursor: pointer;
+}
